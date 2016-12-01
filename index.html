@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- BOOTSTRAP (style only)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Groceries</title>
+    <script type="text/javascript" src="groceries.js"></script>
+  </head>
+  <body lang="en-US">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="input-group">
+            <input type="text" id="newItem" class="form-control"
+                   placeholder="New item...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" onclick="addItem()">
+                <span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-sm-4">
+          <ul id="listDisplay">
+          </ul>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <button type="button" class="btn btn-default" onclick="saveList();">
+                    <span class="glyphicon glyphicon-save-file" aria-hidden="true"></span>
+                    Save List
+                </button>
+                <button type="button" class="btn btn-default" onclick="clearList();">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    Clear List
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
