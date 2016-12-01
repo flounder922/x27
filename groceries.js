@@ -19,16 +19,19 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
 }
 
 function loadCookieList() {
     var list_thingy = getCookie("savedList");
-    var arrayCookie = list_thingy.split(",");
 
-    for(var i = 0; i < arrayCookie.length; ++i)
-    {
-        displayItem(arrayCookie[i]);
+    if(list_thingy != "") {
+        var arrayCookie = list_thingy.split(",");
+        console.log(arrayCookie.length);
+            
+        for(var i = 0; i < arrayCookie.length; ++i)
+        {
+            displayItem(arrayCookie[i]);
+        }
     }
 }
 
@@ -42,14 +45,17 @@ function saveList(){
 
 function clearList(){
     document.getElementById("listDisplay").innerHTML = "";
+
+    myList.splice(0,myList.length);
+    /*
     for(var i; i < myList.length; ++i)
     {
         myList.pop();
     }
+    */
 }
 
 function addItem()  {
-
     var input = document.getElementById("newItem").value;
     displayItem(input);
 }
